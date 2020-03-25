@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.App {
+  background-color: #121212;
+  color: #ddd;
+  width: 100vw;
+  height: 100vh;
+  padding: 5vh 0;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app-title {
+  font-size: 9vh;
+  text-align: center;
+  width: 100%;
+}
+
+.projects-list {
+  margin: 5vh;
+
+  li {
+    padding: 1vh 0;
+    font-size: 3vh;
+
+    &:hover {
+      color: darken(white, 50%);
+      cursor: pointer;
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+.active-project {
+  font-weight: bold;
+  color: white;
+}
+
+.project {
+  align-self: center;
+  justify-self: center;
+}
+
+@media (max-width: 1024px) {
+  
+  .App {
+    grid-template-columns: initial;
+    height: 100%;
+  }
+}
